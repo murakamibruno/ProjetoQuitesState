@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Conserto implements Estado
+public class DevolvidoReservado implements Estado
 {
 
 	@Override
@@ -8,51 +8,17 @@ public class Conserto implements Estado
 		contexto.setContexto(this);
 		
 	}
-	
+
 	public String toString()
 	{
-		return "Em Conserto";
+		return "Devolvido e Reservado";
 	}
-
+	
 	@Override
 	public void informarNome(Contexto contexto, String nome) {
 		contexto.setNome(nome);
 		
 	}
-
-
-	@Override
-	public void informarDataExtravio(Contexto contexto, Date data) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void informarDataDescartado(Contexto contexto, Date data) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void informarDataDanificado(Contexto contexto, Date data) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void informarDataEnvioConserto(Contexto contexto, Date data) {
-		contexto.setDataEnvioConserto(data);		
-	}
-
-	public void informarDataConserto(Contexto contexto, Date data) {
-		contexto.setDataConserto(data);
-	}
-
-	@Override
-	public void informarDataRecuperado(Contexto contexto, Date data) {
-		// TODO Auto-generated method stub
-		
-	}
-
 
 	@Override
 	public void informarDataRetirada(Contexto contexto, Date data) {
@@ -79,9 +45,44 @@ public class Conserto implements Estado
 	}
 
 	@Override
-	public void informarStatusReserva(Contexto contexto, Boolean bool) {
+	public void informarDataExtravio(Contexto contexto, Date data) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void informarDataDescartado(Contexto contexto, Date data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void informarDataDanificado(Contexto contexto, Date data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void informarDataEnvioConserto(Contexto contexto, Date data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void informarDataConserto(Contexto contexto, Date data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void informarDataRecuperado(Contexto contexto, Date data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void informarStatusReserva(Contexto contexto, Boolean bool) {
+		contexto.setStatusReserva(bool);		
 	}
 
 	@Override
